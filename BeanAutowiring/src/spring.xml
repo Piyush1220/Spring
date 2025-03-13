@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="d" class="com.spring.model.Dept">
+        <property name="did" value="1010"></property>
+        <property name="dname" value="HR"></property>
+</bean>
+<bean id="d2" class="com.spring.model.Dept">
+        <property name="did" value="202"></property>
+        <property name="dname" value="Training"></property>
+</bean>
+<bean id="e1" class="com.spring.model.Emp" autowire="byType">
+        <property name="eid" value="1"></property>
+        <property name="ename" value="XYZ"></property>
+        
+</bean>
+
+<bean id="e2" parent="e1" autowire="byType">
+	<property name="eid" value="2"></property>
+
+
+</bean>
+</beans>
